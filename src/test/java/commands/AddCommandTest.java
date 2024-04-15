@@ -125,8 +125,8 @@ public class AddCommandTest {
     public void testAddCommandWithAllCaps() {
         recipes.clear();
         String input = "add PIZZA, 30, 300, CHEESE, DINNER, www.pizzaplace.com";
-        Recipe expectedRecipe = new Recipe("PIZZA", 30, 300,
-                new ArrayList<>(Arrays.asList("CHEESE")), MealCategory.DINNER, LocalDate.now(),
+        Recipe expectedRecipe = new Recipe("pizza", 30, 300,
+                new ArrayList<>(Arrays.asList("cheese")), MealCategory.DINNER, LocalDate.now(),
                 "www.pizzaplace.com");
         Recipe actualRecipe = InputParser.parseAdd(input);
         AddRecipeCommand.execute(actualRecipe, recipes);

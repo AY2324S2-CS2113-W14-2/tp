@@ -102,7 +102,7 @@ public class InputParser {
             return "";
         }
 
-        return userInput.substring(firstSpaceIndex + 1).trim();
+        return userInput.substring(firstSpaceIndex + 1).trim().toLowerCase();
     }
 
     /**
@@ -168,7 +168,7 @@ public class InputParser {
      * @return an array of the recipe details extracted from the user input.
      */
     public static String[] splitUpAddInput(String userInput) {
-        String[] words = userInput.trim().split("\\s+", 2);
+        String[] words = userInput.trim().toLowerCase().split("\\s+", 2);
         try {
             String[] remainingInput = words[USER_INPUT_INDEX].trim().split(RECIPE_DELIMETER);
         } catch (ArrayIndexOutOfBoundsException e) {

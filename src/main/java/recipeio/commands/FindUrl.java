@@ -23,6 +23,7 @@ public class FindUrl {
      * @param recipes List of available recipes to search through.
      */
     public static void execute(String url, ArrayList<Recipe> recipes) {
+        url = url.toLowerCase();
         ArrayList<Integer> listNumbers = new ArrayList<>();
         ArrayList<Recipe> urlMatches = new ArrayList<>();
         Integer count = CommandConstants.STARTING_COUNT;
